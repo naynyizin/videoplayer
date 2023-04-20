@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Video Player</title>
+
+    <!-- fontawesome css1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google material icons css2 -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container show-controls">
+      <div class="wrapper">
+        <div class="video-timeline">
+          <div class="progress-area">
+            <span>00:00</span>
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="video-control">
+          <div class="option left">
+            <button class="volume">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <input type="range" min="0" max="1" step="any" />
+
+            <div class="video-timer">
+              <p class="current-time">00:00</p>
+              <p class="sperator">/</p>
+              <p class="video-duration">00:00</p>
+            </div>
+          </div>
+          <div class="option center">
+            <button class="skip-backward">
+              <i class="fa-solid fa-backward"></i>
+            </button>
+            <button class="play-pause">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button class="skip-forward">
+              <i class="fa-solid fa-forward"></i>
+            </button>
+          </div>
+          <div class="option right">
+            <div class="playback-content">
+              <button class="playback-speed">
+                <span class="material-symbols-outlined">
+                  slow_motion_video
+                </span>
+                <ul class="speed-options">
+                  <li data-speed="2">2x</li>
+                  <li data-speed="1.5">1.5x</li>
+                  <li data-speed="1" class="active">Normal</li>
+                  <li data-speed="0.75">0.75x</li>
+                  <li data-speed="0.5">0.5x</li>
+                </ul>
+              </button>
+            </div>
+            <button class="pic-in-pic">
+              <span class="material-symbols-outlined"> iframe </span>
+            </button>
+            <button class="full-screen">
+              <i class="fa-solid fa-expand"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <video class="mainvideo" src="./src/samplevideo1.mp4"></video>
+    </div>
+
+    <script src="./app.js" type="text/javascript"></script>
+  </body>
+</html>
